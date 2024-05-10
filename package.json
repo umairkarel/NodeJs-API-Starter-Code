@@ -1,0 +1,53 @@
+{
+  "name": "nodejs-api-starter-code",
+  "version": "1.0.0",
+  "description": "nodejs starter code",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext js",
+    "lint:fix": "eslint . --fix --ext js",
+    "start:dev": "pm2-dev start server.js",
+    "start": "pm2 start server.js --name projectName",
+    "start:node": "node server.js",
+    "logs": "pm2 logs projectName",
+    "clearLogs": "pm2 flush projectName",
+    "stop": "pm2 stop projectName"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umairkarel/NodeJs-API-Starter-Code.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "umairkarel",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-session": "^2.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.1",
+    "pm2": "^5.3.1",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "^3.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/umairkarel/NodeJs-API-Starter-Code/issues"
+  },
+  "homepage": "https://github.com/umairkarel/NodeJs-API-Starter-Code#readme"
+}
