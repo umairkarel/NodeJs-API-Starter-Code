@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  project-name:
+    build:
+      context: .
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+      - MONGO_URI=mongodb://root:root@db:27017/
+      - JWT_SALT=this.connect
+      - JTW_EXPIRY=604800
+      - DB_NAME=ProjectName
+    ports:
+      - "${PORT}:${PORT}"
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
